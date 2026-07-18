@@ -3,7 +3,7 @@ import { FaUser, FaFlag } from "react-icons/fa";
 
 const PlayerCard = ({ player }) => {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-3 shadow-sm hover:shadow-xl duration-300">
+    <div className="bg-white rounded-2xl border border-gray-200 p-3 shadow-sm hover:shadow-xl duration-300 w-[90%]">
 
       {/* Image */}
       <figure className="overflow-hidden rounded-2xl">
