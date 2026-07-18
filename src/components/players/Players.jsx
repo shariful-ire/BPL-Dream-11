@@ -1,26 +1,17 @@
-import React, { use } from "react";
-import { FaUser } from "react-icons/fa";
+import  { use } from "react";
+import PlayerCard from "./PlayerCard";
 
 const Players = ({ playerPromise }) => {
+
   const playerData = use(playerPromise);
 
   return (
-    <div>
-      <h1>Total players : {playerData.length}</h1>
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
 
       {playerData.map((player) => (
-        <div key={player.id}>
-          <div className="$$card bg-base-100 w-96 shadow-sm">
-            <figure>
-              <img src={player.playerImage} alt="Player Image" />
-            </figure>
-            <h1 className="flex gap-2 items-center text-center m-1.5 my-auto">
-              <FaUser />
-              {player.playerName}
-            </h1>
-          </div>
-        </div>
+        <PlayerCard key={player.id} player={player} />
       ))}
+
     </div>
   );
 };
