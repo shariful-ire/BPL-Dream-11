@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import Navbar from './components/navbar/Navbar';
-import Banner from './components/homePage/Banner';
+import Banner from './components/homePage/banner/Banner';
 import Players from './components/players/Players';
 
  const fetchPlayer= async () => {
