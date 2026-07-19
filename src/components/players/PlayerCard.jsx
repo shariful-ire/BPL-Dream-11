@@ -64,7 +64,7 @@ const PlayerCard = ({ player, handleSelectPlayer }) => {
 
           <button
             onClick={() => handleSelectPlayer(player)}
-            className="px-5 py-2 rounded-xl border border-gray-300 hover:bg-[#E7FE29] hover:border-[#E7FE29] font-semibold transition-all duration-300"
+            className="px-5 py-2 rounded-xl border border-gray-300 hover:bg-[#21f62f] hover:border-[#1df750] font-semibold transition-all duration-300 btn btn-primary"
           >
             Choose Player
           </button>
