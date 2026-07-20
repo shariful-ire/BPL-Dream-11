@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({coin}) => {
     return (
         <div className="navbar bg-base-100 shadow-sm w-[80%] mx-auto">
   <div className="flex-1">
@@ -13,7 +13,7 @@ const Navbar = () => {
       <li className='border-2 border-b-cyan-400 rounded-xl '><a>Home</a></li>
       <li className='border-2 border-b-cyan-400 rounded-xl '><a>Fixtures</a></li>
       <li className='border-2 border-b-cyan-400 rounded-xl '><a>Team</a></li>
-      <li className='border-2 border-b-cyan-400 rounded-xl '><a>Coin</a></li>
+      <li className='border-2 border-b-cyan-400 rounded-xl '><a> {coin} Coin</a></li>
       
     </ul>
   </div>

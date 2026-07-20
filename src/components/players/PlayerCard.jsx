@@ -154,26 +154,15 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
             }
 
             `}
-
           >
-
             {
-              isSelected
-              ?
-              "Selected"
-              :
-              "Choose Player"
+              isSelected?"Selected":"Choose Player"
+              
             }
 
-
           </button>
-
-
         </div>
-
-
       </div>
-
 
     </div>
   );
