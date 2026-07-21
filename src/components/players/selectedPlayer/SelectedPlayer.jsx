@@ -7,7 +7,6 @@ const SelectedPlayer = ({
 }) => {
 
 
-
   if(selectedPlayers.length === 0){
 
     return (
@@ -21,9 +20,6 @@ const SelectedPlayer = ({
     );
 
   }
-
-
-
 
 
   return (

@@ -1,7 +1,7 @@
 import { FaUser, FaFlag } from "react-icons/fa";
 
 
-const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
+const PlayerCard = ({ player, handleSelectPlayer, isSelected, coin,setCoin }) => {
 
 
   return (
@@ -19,8 +19,6 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
 
       </figure>
 
-
-
       {/* Content */}
       <div className="p-5">
 
@@ -34,9 +32,6 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
 
         </h2>
 
-
-
-
         {/* Country & Role */}
         <div className="flex justify-between items-center mt-4">
 
@@ -49,26 +44,16 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
 
           </p>
 
-
-
           <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-sm">
 
             {player.playerType}
 
           </span>
 
-
         </div>
-
-
-
 
         {/* Divider */}
         <div className="border-t border-dashed border-gray-300 my-5"></div>
-
-
-
-
 
         {/* Rating */}
         <h3 className="font-semibold text-lg text-gray-800 mb-3">
@@ -76,10 +61,6 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
           Rating: ⭐ {player.rating}
 
         </h3>
-
-
-
-
 
         {/* Batting Bowling */}
 
@@ -98,9 +79,6 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
 
           </div>
 
-
-
-
           <div className="text-right">
 
             <p className="font-semibold text-gray-700">
@@ -117,11 +95,6 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
 
         </div>
 
-
-
-
-
-
         {/* Footer */}
 
         <div className="flex justify-between items-center mt-6">
@@ -133,15 +106,13 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
 
           </h2>
 
-
-
-
-
           <button
 
-            onClick={() => handleSelectPlayer(player)}
-
             disabled={isSelected}
+
+            onClick={() => handleSelectPlayer(player),()=>setCoin(coin-player.price)}
+
+            
 
             className={`btn rounded-xl px-5 py-2 font-semibold
 
@@ -150,7 +121,7 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected }) => {
               ?
               "bg-gray-400 cursor-not-allowed"
               :
-              "btn-primary hover:bg-[#21f62f]"
+              "btn-primary bg-[#21f62f]"
             }
 
             `}

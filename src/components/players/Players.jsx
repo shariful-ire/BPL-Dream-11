@@ -1,6 +1,5 @@
 import { use, useState } from "react";
 
-
 import AvailablePlayers 
 from "./availablePlayers/AvailablePlayers";
 
@@ -9,24 +8,16 @@ import SelectedPlayer
 from "./selectedPlayer/SelectedPlayer";
 
 
-
-const Players = ({ playerPromise }) => {
+const Players = ({ playerPromise, setCoin, coin}) => {
 
 
   const playerData = use(playerPromise);
 
 
-
   const [selectedType,setSelectedType] = useState("available");
 
 
-
   const [selectedPlayers,setSelectedPlayers] = useState([]);
-
-
-
-
-
 
   const handleSelectPlayer = (player)=>{
 
@@ -35,28 +26,15 @@ const Players = ({ playerPromise }) => {
       (p)=>p.id === player.id
     );
 
-
-
     if(exists){
 
       return;
 
     }
 
-
-
-    setSelectedPlayers([
-      ...selectedPlayers,
-      player
-    ]);
-
+    setSelectedPlayers([...selectedPlayers, player]);
 
   };
-
-
-
-
-
 
 
   return (
@@ -73,23 +51,14 @@ const Players = ({ playerPromise }) => {
 
 
           {
-            selectedType === "available"
-            ?
-            "Available Players"
-            :
-            `Selected Players (${selectedPlayers.length})`
+            selectedType === "available"?"Available Players":`Selected Players (${selectedPlayers.length})`
+            
           }
 
 
         </h2>
 
-
-
-
-
         <div className="flex gap-4">
-
-
 
           <button
 
@@ -109,10 +78,6 @@ const Players = ({ playerPromise }) => {
 
           </button>
 
-
-
-
-
           <button
 
             onClick={()=>setSelectedType("selected")}
@@ -131,19 +96,10 @@ const Players = ({ playerPromise }) => {
 
           </button>
 
-
-
         </div>
 
 
       </div>
-
-
-
-
-
-
-
 
       {
         selectedType === "available"
@@ -153,24 +109,18 @@ const Players = ({ playerPromise }) => {
 
         <AvailablePlayers
 
-
           players={playerData}
 
-
           handleSelectPlayer={handleSelectPlayer}
 
-
           selectedPlayers={selectedPlayers}
-
+          setCoin={setCoin}
+          coin={coin}
 
         />
-
-
-
         :
 
-
-        <SelectedPlayer
+         <SelectedPlayer
 
 
           selectedPlayers={selectedPlayers}
@@ -178,20 +128,13 @@ const Players = ({ playerPromise }) => {
 
           handleSelectPlayer={handleSelectPlayer}
 
-
         />
 
-
-
       }
-
-
 
     </>
 
   );
 };
-
-
 
 export default Players;
