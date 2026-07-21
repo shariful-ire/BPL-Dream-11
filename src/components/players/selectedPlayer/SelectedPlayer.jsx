@@ -1,7 +1,11 @@
 import { FaUser } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 
-const SelectedPlayer = ({ selectedPlayers, handleDeleteSelectedPlayer }) => {
+const SelectedPlayer = ({
+  selectedPlayers,
+  handleDeleteSelectedPlayer,
+  setSelectedType,
+}) => {
   if (selectedPlayers.length === 0) {
     return (
       <h2 className="text-2xl font-bold text-center h-[200px] mx-auto py-20">
@@ -39,6 +43,13 @@ const SelectedPlayer = ({ selectedPlayers, handleDeleteSelectedPlayer }) => {
           </button>
         </div>
       ))}
+
+      <button
+        onClick={() => setSelectedType("available")}
+        className="btn btn-primary"
+      >
+        Add More
+      </button>
     </div>
   );
 };

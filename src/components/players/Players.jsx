@@ -17,6 +17,7 @@ const Players = ({ playerPromise, setCoin, coin }) => {
 
     if (exists) {
       toast.warning("Player already selected!");
+
       return;
     }
 
@@ -80,6 +81,7 @@ const Players = ({ playerPromise, setCoin, coin }) => {
         <SelectedPlayer
           selectedPlayers={selectedPlayers}
           handleDeleteSelectedPlayer={handleDeleteSelectedPlayer}
+          setSelectedType={setSelectedType}
         />
       )}
     </>
