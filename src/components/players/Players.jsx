@@ -1,7 +1,8 @@
 import { use, useState } from "react";
 
-import AvailablePlayers from "./availablePlayers/AvailablePlayers";
+import { toast } from "react-toastify";
 
+import AvailablePlayers from "./availablePlayers/AvailablePlayers";
 import SelectedPlayer from "./selectedPlayer/SelectedPlayer";
 
 const Players = ({ playerPromise, setCoin, coin }) => {
@@ -15,16 +16,26 @@ const Players = ({ playerPromise, setCoin, coin }) => {
     const exists = selectedPlayers.find((p) => p.id === player.id);
 
     if (exists) {
+      toast.warning("Player already selected!");
       return;
     }
 
     setSelectedPlayers([...selectedPlayers, player]);
   };
 
+  const handleDeleteSelectedPlayer = (player) => {
+    const remainingPlayers = selectedPlayers.filter((p) => p.id !== player.id);
+
+    setSelectedPlayers(remainingPlayers);
+
+    // refund coin
+    setCoin(coin + player.price);
+
+    toast.warning(`${player.playerName} Removed Successfully!`);
+  };
+
   return (
     <>
-      {/* Heading */}
-
       <div className="flex my-5 w-[80%] mx-auto justify-between items-center">
         <h2 className="font-bold text-4xl">
           {selectedType === "available"
@@ -68,7 +79,7 @@ const Players = ({ playerPromise, setCoin, coin }) => {
       ) : (
         <SelectedPlayer
           selectedPlayers={selectedPlayers}
-          handleSelectPlayer={handleSelectPlayer}
+          handleDeleteSelectedPlayer={handleDeleteSelectedPlayer}
         />
       )}
     </>

@@ -11,7 +11,7 @@ import Players from './components/players/Players';
 
 const App = () => {
 
-  const [coin, setCoin]=useState(500000);
+  const [coin, setCoin]=useState(5000000);
   const playerPromise= fetchPlayer();
 
   return (

@@ -79,12 +79,12 @@ const PlayerCard = ({
 
               handleSelectPlayer(player);
               setCoin(coin - player.price);
-              toast.success("Player Selected Successfully!");
+              toast.success(`${player.playerName} Selected Successfully!`);
             }}
             disabled={isSelected}
             className={`btn rounded-xl px-5 py-2 font-semibold
     ${
-      isSelected ? "bg-gray-400 cursor-not-allowed" : "btn-primary bg-[#21f62f]"
+      isSelected ? "bg-gray-400 cursor-not-allowed" : "btn-primary "
     }
   `}
           >
