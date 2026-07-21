@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar';
 import Banner from './components/homePage/banner/Banner';
 import Players from './components/players/Players';
 
+
  const fetchPlayer= async () => {
     const res= await fetch("/data.json");
     return res.json();

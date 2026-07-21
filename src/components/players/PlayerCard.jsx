@@ -1,4 +1,5 @@
 import { FaUser, FaFlag } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const PlayerCard = ({
   player,
@@ -71,19 +72,21 @@ const PlayerCard = ({
 
           <button
             onClick={() => {
+              if (coin < player.price) {
+                toast.error("Not enough coin!");
+                return;
+              }
+
               handleSelectPlayer(player);
               setCoin(coin - player.price);
+              toast.success("Player Selected Successfully!");
             }}
             disabled={isSelected}
             className={`btn rounded-xl px-5 py-2 font-semibold
-
-            ${
-              isSelected
-                ? "bg-gray-400 cursor-not-allowed"
-                : "btn-primary bg-[#21f62f]"
-            }
-
-            `}
+    ${
+      isSelected ? "bg-gray-400 cursor-not-allowed" : "btn-primary bg-[#21f62f]"
+    }
+  `}
           >
             {isSelected ? "Selected" : "Choose Player"}
           </button>
