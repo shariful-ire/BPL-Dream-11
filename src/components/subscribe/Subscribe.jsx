@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Subscribe = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = (e) => {
     e.preventDefault();
-    
-    if (email.trim() === '') {
-      toast.warning('Please enter your email address!', {
+
+    if (email.trim() === "") {
+      toast.warning("Please enter your email address!", {
         closeOnClick: true,
-        onClose: () => console.log('Toast closed')
+        onClose: () => console.log("Toast closed"),
       });
       return;
     }
-    
-    if (!email.includes('@') || !email.includes('.')) {
-      toast.error('Please enter a valid email address!', {
-        closeOnClick: true
+
+    if (!email.includes("@") || !email.includes(".")) {
+      toast.error("Please enter a valid email address!", {
+        closeOnClick: true,
       });
       return;
     }
-    
-    toast.success('Subscribed successfully! 🎉', {
-      closeOnClick: true
+
+    toast.success("Subscribed successfully! 🎉", {
+      closeOnClick: true,
     });
-    setEmail('');
+    setEmail("");
   };
 
   return (
@@ -36,7 +36,10 @@ const Subscribe = () => {
         <p className="text-sm text-gray-400 mb-5">
           Get the latest updates and news right in your inbox!
         </p>
-        <form onSubmit={handleSubscribe} className="flex gap-3 flex-wrap sm:flex-nowrap">
+        <form
+          onSubmit={handleSubscribe}
+          className="flex gap-3 flex-wrap sm:flex-nowrap"
+        >
           <input
             type="email"
             placeholder="Enter your email"
@@ -52,7 +55,7 @@ const Subscribe = () => {
           </button>
         </form>
       </div>
-      
+
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -64,7 +67,7 @@ const Subscribe = () => {
         draggable
         pauseOnHover
         theme="light"
-        onClick={() => console.log('Toast clicked')}
+        onClick={() => console.log("Toast clicked")}
       />
     </>
   );

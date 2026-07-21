@@ -1,5 +1,5 @@
-import React from 'react';
-import Subscribe from '../subscribe/Subscribe'; // ✅ Fixed import path
+import React from "react";
+import Subscribe from "../subscribe/Subscribe"; // ✅ Fixed import path
 
 const Footer = () => {
   return (
@@ -10,25 +10,34 @@ const Footer = () => {
           <div className="max-w-xs">
             <h3 className="text-lg mb-4 text-yellow-400">About Us</h3>
             <p className="text-sm leading-relaxed text-gray-300">
-              We are a passionate team dedicated to providing the best
-              services to our customers.
+              We are a passionate team dedicated to providing the best services
+              to our customers.
             </p>
           </div>
           <div>
             <h3 className="text-lg mb-4 text-yellow-400">Quick Links</h3>
             <ul className="space-y-2.5">
               <li>
-                <a href="#" className="text-gray-300 text-sm hover:text-yellow-400 transition-colors duration-300 no-underline">
+                <a
+                  href="#"
+                  className="text-gray-300 text-sm hover:text-yellow-400 transition-colors duration-300 no-underline"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 text-sm hover:text-yellow-400 transition-colors duration-300 no-underline">
+                <a
+                  href="#"
+                  className="text-gray-300 text-sm hover:text-yellow-400 transition-colors duration-300 no-underline"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 text-sm hover:text-yellow-400 transition-colors duration-300 no-underline">
+                <a
+                  href="#"
+                  className="text-gray-300 text-sm hover:text-yellow-400 transition-colors duration-300 no-underline"
+                >
                   Contact
                 </a>
               </li>
