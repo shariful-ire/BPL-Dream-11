@@ -289,9 +289,9 @@ Contributions are what make the open-source community such an amazing place. Any
 
 ## 📞 Contact
 
-**Your Name** - [@your_twitter](https://twitter.com/your_twitter) - your.email@example.com
+## Vew GitHub Profile to Contuct: [https://github.com/shariful-ire]
 
-**Project Link:** [https://github.com/yourusername/BPL-Dream-11](https://github.com/yourusername/BPL-Dream-11)
+**Project Live Link:** [https://tranquil-semolina-522cec.netlify.app/]
 
 ---
 
@@ -318,5 +318,5 @@ Contributions are what make the open-source community such an amazing place. Any
   
   ⭐ Star us on GitHub — it helps!
 </div>
-```
+
 
