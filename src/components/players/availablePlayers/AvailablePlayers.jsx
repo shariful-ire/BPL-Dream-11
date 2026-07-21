@@ -22,7 +22,7 @@ const AvailablePlayers = ({
 
             player={player}
 
-            handleSelectPlayer={()=>handleSelectPlayer}
+            handleSelectPlayer={handleSelectPlayer}
 
             isSelected={
               selectedPlayers.some(

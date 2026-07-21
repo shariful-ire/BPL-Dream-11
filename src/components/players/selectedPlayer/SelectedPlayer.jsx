@@ -48,8 +48,6 @@ const SelectedPlayer = ({
         ))
       }
 
-
-
     </div>
 
 

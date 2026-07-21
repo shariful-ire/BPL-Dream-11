@@ -108,11 +108,11 @@ const PlayerCard = ({ player, handleSelectPlayer, isSelected, coin,setCoin }) =>
 
           <button
 
+
+            onClick={ ()=>{handleSelectPlayer(player);
+                      setCoin(coin-player.price);}}
+
             disabled={isSelected}
-
-            onClick={() => handleSelectPlayer(player),()=>setCoin(coin-player.price)}
-
-            
 
             className={`btn rounded-xl px-5 py-2 font-semibold
 
